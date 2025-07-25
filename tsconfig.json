@@ -3,11 +3,17 @@
     "target": "ESNext",
     "useDefineForClassFields": true,
     "module": "ESNext",
-    "moduleResolution": "Bundler",
+    "moduleResolution": "Node",
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
     },
-    "jsx": "react-jsx"
-  }
+    "jsx": "react-jsx",                               
+    "lib": ["DOM", "ESNext"],
+    "types": ["vite/client", "react", "react-dom"],
+    "esModuleInterop": true,                          // ✅ Required for default import compatibility
+    "allowSyntheticDefaultImports": true,             // ✅ Fixes React default import issues
+    "skipLibCheck": true
+  },
+  "include": ["src"]
 }
